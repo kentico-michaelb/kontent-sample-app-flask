@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  <script src="https://platform.twitter.com/widgets.js"></script>
+{% endblock %}
+{% block content %}
+  <article class="article-detail col-lg-9 col-md-12 article-detail-related-box">
+      <h2>{{ article.elements.title.value }}</h2>
+      <div class="article-detail-datetime">
+          {{ article.elements.post_date.value }}
+      </div>
+      <div class="row">
+          <div class="article-detail-image col-md-push-2 col-md-8">
+              <img src='{{ article.elements.teaser_image.value[0].url }}' class="img-responsive" />
+          </div>
+      </div>
+      <div class="row">
+          <div class="article-detail-content">
+              {{ article.elements.body_copy.value | safe }}
+          </div>
+      </div>
+  </article>
+  {% if article.elements.related_articles.value %}
+  <div class="article-related-articles">
+        <h1 class="title-tab">Related Articles</h1>
+        <div class="row">         
+            {% for related in related_articles %}                           
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="article-tile">
+                        <a href="/articles/{{ related.elements.url_pattern.value }})">
+                            <img src='{{ related.elements.teaser_image.value[0].url }}' class="img-responsive" />
+                        </a>
+                        <div class="article-tile-date">
+                            {{ related.elements.post_date.value }}
+                        </div>
+                        <div class="article-tile-content">
+                            <h2 class="h4">
+                                <a href="/articles/{{ related.elements.url_pattern.value }}">
+                                    {{ related.elements.title.value }}
+                                </a>
+                            </h2>
+                            <p class="article-tile-text">
+                                {{ related.elements.summary.value | safe }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+  {% endif %}
+{% endblock %}
