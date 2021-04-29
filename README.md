@@ -18,8 +18,8 @@ To run the application:
 2. Add your Kontent Project ID key to `config.py` in the project root - detailed instructions available [below](#connecting-to-your-sample-project)
 3. Install the project dependencies: `pip install -r requirements.txt`
 4. Set the FLASK_APP environment variable: `set FLASK_APP=sample`
-5. Install the application using `pip install -e .`
-6. Run the application: `run flask`
+5. Install the application using `pip install -e .` (including the period)
+6. Run the application: `flask run`
 
 ### Connecting to your Sample Project
 If you already have a [Kentico Kontent account](https://app.kontent.ai), you can connect this application to your version of the Sample project.
