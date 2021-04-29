@@ -8,6 +8,7 @@ def articles():
     articles = client.get_content_items(
         Filter("system.type", "[eq]", "article")
     )
+
     if articles:
         for article in articles.items:
             image = ImageBuilder(article.elements.teaser_image.value[0].url)
@@ -18,6 +19,7 @@ def articles():
             )
             article.elements.teaser_image.value[0].url = transformed_image
         return render_template("articles/listing.html", articles=articles.items)
+    return render_template("error_pages/404.html"), 404
 
 
 @app.route("/articles/<url_slug>")
@@ -26,9 +28,10 @@ def detail(url_slug):
         Filter("elements.url_pattern", "[eq]", url_slug)
     )
 
-    article = resp.items[0]
-
-    if article:
+    if resp:
+        article = resp.items[0]
         related_articles = article.get_linked_items("related_articles")
         return render_template("articles/detail.html", article=article, related_articles=related_articles)
+    return render_template("error_pages/404.html"), 404
+
 

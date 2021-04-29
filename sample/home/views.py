@@ -11,3 +11,4 @@ def index():
         articles = resp.get_linked_items("articles")
 
         return render_template("home/index.html", hero=hero, articles=articles)
+    return render_template("error_pages/404.html"), 404
