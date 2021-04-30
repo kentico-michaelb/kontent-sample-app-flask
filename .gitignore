@@ -1,3 +1,6 @@
+# custom
+config.py
+
 ### VisualStudioCode ###
 .vscode/*
 .vscode/settings.json
