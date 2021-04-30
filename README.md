@@ -1,4 +1,4 @@
-![Build & Test](https://github.com/kentico-michaelb/kontent-delivery-python-sdk/actions/workflows/python-package.yml/badge.svg)
+![Build & Test](https://github.com/kentico-michaelb/kontent-sample-app-flask/actions/workflows/python-package.yml/badge.svg)
 
 # Kentico Kontent sample Flask application
 
