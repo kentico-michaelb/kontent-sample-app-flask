@@ -15,14 +15,16 @@ def content_item_path():
 @pytest.fixture
 def new_content_item(content_item_path):
     json = get_json(content_item_path)
-    content_item = ContentItem(json["item"]["system"], json["item"]["elements"])
+    content_item = ContentItem(json["item"]["system"],
+                               json["item"]["elements"])
     return content_item
 
 
 @pytest.fixture
 def new_inline_link(content_item_path):
     json = get_json(content_item_path)
-    content_item = ContentItem(json["item"]["system"], json["item"]["elements"])
+    content_item = ContentItem(json["item"]["system"],
+                               json["item"]["elements"])
     # convert types.SimpleNamespace object to dict
     links = vars(content_item.elements.body_copy.links)
     first_link = next(iter(links.values()))
@@ -47,4 +49,3 @@ def test_inline_link_resolver(new_inline_link):
     link_resolver = CustomLinkResolver()
     result = link_resolver.resolve_link(new_inline_link)
     assert result == "/coffees/kenya-gakuyuni-aa"
-
