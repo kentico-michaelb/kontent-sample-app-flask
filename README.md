@@ -2,7 +2,7 @@
 
 This is a sample Flask app that uses the [Kentico Kontent Python SDK](#https://github.com/kentico-michaelb/kontent-delivery-python-sdk) to retrieve content from Kentico Kontent.
 
-This application uses the Dancing Goat sample project within Kentico Kontent. If you don't have your own Sample Project, any administrator of a Kentico Kontent subscription [can generate one](https://app.kontent.ai/sample-project-generator).
+This application uses the shared Dancing Goat sample project within Kentico Kontent. If you don't have your own Sample Project, any administrator of a Kentico Kontent subscription [can generate one](https://app.kontent.ai/sample-project-generator).
 
 If you find a bug in the sample or have a feature request, please submit a GitHub issue.
 
