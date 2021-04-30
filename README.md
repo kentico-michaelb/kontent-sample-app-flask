@@ -1,3 +1,5 @@
+![Build & Test](https://github.com/kentico-michaelb/kontent-delivery-python-sdk/actions/workflows/python-package.yml/badge.svg)
+
 # Kentico Kontent sample Flask application
 
 This is a sample Flask app that uses the [Kentico Kontent Python SDK](#https://github.com/kentico-michaelb/kontent-delivery-python-sdk) to retrieve content from Kentico Kontent.
