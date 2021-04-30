@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![Build & Test](https://github.com/kentico-michaelb/kontent-sample-app-flask/actions/workflows/python-app.yml/badge.svg)
+=======
+![Build & Test](https://github.com/kentico-michaelb/kontent-sample-app-flask/actions/workflows/python-package.yml/badge.svg)
+>>>>>>> 07c9c680afd5ea1e338ff7a6354bde8936b9df0c
 
 # Kentico Kontent sample Flask application
 
