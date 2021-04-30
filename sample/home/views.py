@@ -1,6 +1,7 @@
 from flask.templating import render_template
 from sample import app, client
 
+
 @app.route("/")
 def index():
     resp = client.get_content_item("home")

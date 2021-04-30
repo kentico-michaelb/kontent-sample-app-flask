@@ -10,7 +10,7 @@ class CustomItemResolver:
                     f"<a href={linked_item.elements.tweet_link.value}></a></blockquote>")
 
         if linked_item.content_type == "hosted_video":
-            return ("<div><iframe type=\"text/html\" width=\"640\" height=\"385\"" 
-                     "style=\"display:block; margin: auto; margin-top:30px ; margin-bottom: 30px\"" 
-                     f"src=\"https://www.youtube.com/embed/{linked_item.elements.video_id.value}?autoplay=1\"" 
-                     "frameborder=\"0\"></iframe></div>")
+            return ("<div><iframe type=\"text/html\" width=\"640\" height=\"385\""
+                    "style=\"display:block; margin: auto; margin-top:30px ; margin-bottom: 30px\""
+                    f"src=\"https://www.youtube.com/embed/{linked_item.elements.video_id.value}?autoplay=1\""
+                    "frameborder=\"0\"></iframe></div>")

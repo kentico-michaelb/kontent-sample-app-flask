@@ -3,6 +3,7 @@ from kontent_delivery.builders.filter_builder import Filter
 from kontent_delivery.builders.image_builder import ImageBuilder
 from sample import app, client
 
+
 @app.route("/articles")
 def articles():
     articles = client.get_content_items(
@@ -33,5 +34,3 @@ def detail(url_slug):
         related_articles = article.get_linked_items("related_articles")
         return render_template("articles/detail.html", article=article, related_articles=related_articles)
     return render_template("error_pages/404.html"), 404
-
-
