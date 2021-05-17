@@ -1,4 +1,5 @@
 ![Build & Test](https://github.com/kentico-michaelb/kontent-sample-app-flask/actions/workflows/python-app.yml/badge.svg)
+[![Live Demo](https://img.shields.io/badge/live-demo-brightgreen.svg)](https://kontent-sample-app-flask.herokuapp.com/)
 
 # Kentico Kontent sample Flask application
 
